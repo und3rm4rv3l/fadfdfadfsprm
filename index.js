@@ -88,14 +88,14 @@ client.on ('ready', () => {
 });
 
 var slowCol = new Set();
-client.on("message", message => {
+client.on("message", (message) => {
    	
+	    if (message.author.bot) return;
+	
     database.Guilds.findOne({
         "_id": message.guild.id
     }, function(erro, sysop) {
-	    
-	    if (message.author.bot) return;
-	    
+	    	    
         if (!sysop) return 
         if (!sysop.slow) return 
         if (sysop) {
@@ -149,39 +149,6 @@ client.on('guildMemberAdd', member => {
     client.users.get(member.id).send(mensagem)
   }
   })
-/*
-	
-//contador manu
-database.Guilds.findOne({"_id": member.guild.id}, function(erra, sysop) {
-		
-let id = "462705495573135361";
-let nww =  `${client.guilds.get(id).memberCount.toString()}`
-let manu = nww.replace(/0/gi, ':zero:').replace(/1/gi, ':one:').replace(/2/gi, ':two:').replace(/3/gi, ':three:').replace(/4/gi, ':four:').replace(/5/gi, ':five:').replace(/6/gi, ':six:').replace(/7/gi, ':seven:').replace(/8/gi, ':eight:').replace(/9/gi, ':nine:');
-client.channels.get('475739770996129802').edit({ topic: `<a:SysopEmojiLOGOGIF:456242315669798914> | ${manu} Colá la  que é sucesso https://www.facebook.com/discordmoon/` })
-	})
-//contador  god
-database.Guilds.findOne({"_id": member.guild.id}, function(erra, sysop) {
-let idd = "447440828214935565";
-let godzilla =  `${client.guilds.get(idd).memberCount.toString()}`
-let aquaman = godzilla.replace(/0/gi, ':zero:').replace(/1/gi, ':one:').replace(/2/gi, ':two:').replace(/3/gi, ':three:').replace(/4/gi, ':four:').replace(/5/gi, ':five:').replace(/6/gi, ':six:').replace(/7/gi, ':seven:').replace(/8/gi, ':eight:').replace(/9/gi, ':nine:');
-client.channels.get('473640254809702400').edit({ topic: `<a:SysopEmojiLOGOGIF:456242315669798914> | ${aquaman} BEM-VINDOS A GODZILLA! <a:pulo:458416272485646376> https://discord.gg/QhhAzat` })
-	})
-	
-//contador  mickey
-database.Guilds.findOne({"_id": member.guild.id}, function(erra, sysop) {
-let iddd  = "459794576627073024"
-let disney =  `${client.guilds.get(iddd).memberCount.toString()}`
-let land = disney.replace(/0/gi, ':zero:').replace(/1/gi, ':one:').replace(/2/gi, ':two:').replace(/3/gi, ':three:').replace(/4/gi, ':four:').replace(/5/gi, ':five:').replace(/6/gi, ':six:').replace(/7/gi, ':seven:').replace(/8/gi, ':eight:').replace(/9/gi, ':nine:');
-client.channels.get('475549208225775649').edit({ topic: `<a:SysopEmojiLOGOGIF:456242315669798914> | ${land} BEM-VINDOS A DISNEY LAND! <a:pulo:458416272485646376>` })
-	})
-	
-//contador  anime spirit
-database.Guilds.findOne({"_id": member.guild.id}, function(erra, sysop) {
-let idddd  = "435957344782909440"
-let anime =  `${client.guilds.get(idddd).memberCount.toString()}`
-let spirit = anime.replace(/0/gi, ':zero:').replace(/1/gi, ':one:').replace(/2/gi, ':two:').replace(/3/gi, ':three:').replace(/4/gi, ':four:').replace(/5/gi, ':five:').replace(/6/gi, ':six:').replace(/7/gi, ':seven:').replace(/8/gi, ':eight:').replace(/9/gi, ':nine:');
-client.channels.get('472087921072013312').edit({ topic: `<a:SysopEmojiLOGOGIF:456242315669798914> | ${spirit} Bem-vindo (a) ao AnimeSpirit seu Otaku! #3k <a:nomparty:448302844219621376>` })
-	})*/	
 
 	//contador + setador
 database.Guilds.findOne({"_id": member.guild.id}, function(erra, sysop) {
