@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const client  = new Discord.Client();
 const config  = require("./config.json");
-const configuration  = require("./configuration.json");
 const fs      = require("fs");
 const YTDL = require('ytdl-core');
 const modRole = ('Administrator');
