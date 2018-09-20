@@ -22,7 +22,7 @@ client.on("ready", () => {
 client.user.setPresence({
         status: 'Online',
         game: {
-            name: `sy!help`,
+            name: `s!help`,
             url: 'https://www.twitch.tv/expextreadriano'
         }
 });
