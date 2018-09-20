@@ -12,12 +12,11 @@ db.Bloqueio.findOne({
         
 }
 
-  const ID = "307956208042770433";
-  let users = client.guilds.get(ID).members.get(message.author.id);
-  if (users) 
+  let users = client.guilds.get('307956208042770433').members.get(message.author.id);
+  if (!users) 
   return message.reply("Você não está no servidor oficial do Sysop,pega o convite usando **sy!infos**");
-  let role = client.guilds.get(ID).members.get(message.author.id).roles.find("id", "439588232263499776")
-  if(role)
+  let role = client.guilds.get('307956208042770433').members.get(message.author.id).roles.find("id", "439588232263499776")
+  if(!role)
   return message.channel.send('Woww! Você descobriu um recurso para parceiros. <:DiscordPartner:467546781538975754> Mais infos de como virar parceiro digite: sy!partner.');
   
 
