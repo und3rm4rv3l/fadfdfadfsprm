@@ -29,7 +29,7 @@ if (docu) {
 
 let nha;
 
-if (!docu.convites) nha = `Ativado`;
+if (!docu.inv) nha = `Ativado`;
 else nha = `Desativado`;
 
 if (!suffix) return message.reply(`<:sysalerta:469789950938841088> Você deve especificar um filtro. Filtros disponíveis: \`invites\``);
@@ -47,7 +47,7 @@ if (!message.member.hasPermission('ADMINISTRATOR'))
     		    if (!docu) 
     			docu = {};
     			if (!!docu.inv)
-    			docu.inv = !docu.convites;
+    			docu.inv = !docu.inv;
     			else 
     			docu.inv = true;
     			
