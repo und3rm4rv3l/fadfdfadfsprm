@@ -129,7 +129,7 @@ sysop.save();
 });
 
 client.on('guildMemberAdd', member => { 
-  database.Guilds.findOne({"_id": member.guild.id}, function(erra, sysop) {
+ /* database.Guilds.findOne({"_id": member.guild.id}, function(erra, sysop) {
     if(!sysop) return;
     if(!sysop.welcomeChannel) return;
     if(!sysop.welcome) return;
@@ -148,7 +148,7 @@ client.on('guildMemberAdd', member => {
     let mensagem = sysop.dm.replace(/\$\{USER\}/gi, member.user.username).replace(/\$\{SERVER\}/gi, member.guild.name).replace(/\$\{MENTION\}/gi, `${member.user}`).replace(/\$\{USER_ICONURL\}/gi, member.user.displayAvatarURL).replace(/\$\{USER_ID\}/gi, member.user.id);
     client.users.get(member.id).send(mensagem)
   }
-  })
+  })*/
 
 	//contador + setador
 database.Guilds.findOne({"_id": member.guild.id}, function(erra, sysop) {
@@ -197,7 +197,7 @@ client.on('guildMemberAdd', (member) => {
 
 client.on('guildMemberRemove', member => {
 
-  database.Guilds.findOne({"_id": member.guild.id}, function(erra, sysop) {
+  /*database.Guilds.findOne({"_id": member.guild.id}, function(erra, sysop) {
     if(!sysop) return;
     if(!sysop.byeChannel) return;
     if(!sysop.bye) return;
@@ -207,7 +207,7 @@ client.on('guildMemberRemove', member => {
 
     client.guilds.get(member.guild.id).channels.get(sysop.byeChannel).send(mensagem)
   }
-  })
+  })*/
 	
 
 //contador + setador
