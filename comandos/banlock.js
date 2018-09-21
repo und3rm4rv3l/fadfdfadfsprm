@@ -31,10 +31,10 @@ let id = message.mentions.users.first()
     : args
     ? args[0]
     : null;
-if (!id) return message.reply('<:sysalerta:469789950938841088> Mencione alguém ou especifique um ID.');
+if (!id) return message.channel.send(`<:sysalerta:469789950938841088> ${message.author}! Mencione alguém ou especifique um ID.`);
 
 let banPerms = message.guild.member(client.user).hasPermission('BAN_MEMBERS')
-if (!banPerms)  return message.reply("Eu não tenho permissão para banir usuários nesse servidor.");
+if (!banPerms)  return message.reply(`<:sysalerta:469789950938841088> ${message.author}! Eu não tenho permissão para banir usuários nesse servidor.`);
 
 let user = client.users.has(id) ? client.users.get(id) : null;
 
