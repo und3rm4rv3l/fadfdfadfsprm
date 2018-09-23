@@ -39,7 +39,7 @@ return message.reply('<:FalseSysop3:462306755150479372>  Desculpe, não posso fa
             let args = suffix.split(' '); 
             let sysop =  args.slice(1).join(' ') 
             ? args.slice(1).join(' ')
-            :  "Recebeu uma anistia sem colocar o motivo.";
+            :  `Recebeu uma anistia sem colocar o motivo  por: ${message.author}`;
 
 let id = message.mentions.users.first()
 
@@ -48,7 +48,7 @@ let id = message.mentions.users.first()
     : args
     ? args[0]
     : null;
-if (!id) return message.reply('Especifique um ID do usuário a receber Anistia.');
+if (!id) return message.reply('Especifique um ID do usuário a receber Unban.');
 let user = client.users.has(id) ? client.users.get(id) : null;
 if (!user) return message.reply("<:FalseSysop3:462306755150479372> Não encontrei nenhum usuário");
 let unban = message.guild.unban(id);
