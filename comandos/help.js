@@ -24,6 +24,6 @@ database.Bloqueio.findOne({
 **unban <ID>** - Desbani usuários do servidor por ID. (Para usar por ID o usuário a ser desbanido, deve estar em um servidor em comum com o bot.)`)
         .setColor('#fc8d00');
         message.author.send({embed}).then(sentMsg => sentMsg.delete(120000));
-        
+});
     }
 };
