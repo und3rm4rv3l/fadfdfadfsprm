@@ -245,7 +245,7 @@ if (message.guild) {
 database.Guilds.findOne({"_id": message.guild.id}, function(erra, sysop) {
 if (sysop) {
 
-var oi = message.guild.roles.find("name", "😡 SysopRage 😡")        // variaveis
+var oi = message.guild.roles.find("name", "😡 Sysop Warn 😡")        // variaveis
     if (oi == null ){
            message.guild.createRole({
                    
@@ -253,7 +253,7 @@ var oi = message.guild.roles.find("name", "😡 SysopRage 😡")        // varia
                "color": 0xA4A4A4, //cor do cargo
                "permissions": 1, //numero da permission
                "mentionable": false, //se ele e mencionavel
-               "position": 49
+               "position": 48
            })         
                   message.guild.createRole({
                           
@@ -261,7 +261,7 @@ var oi = message.guild.roles.find("name", "😡 SysopRage 😡")        // varia
                       "color": 0xA4A4A4, //cor do cargo
                       "permissions": 1, //numero da permission
                       "mentionable": false, //se ele e mencionavel
-                      "position": 49
+                      "position": 48
                   })
                               message.guild.createRole({
                                  
@@ -269,21 +269,21 @@ var oi = message.guild.roles.find("name", "😡 SysopRage 😡")        // varia
                              "color": 0xA4A4A4, //cor do cargo
                              "permissions": 1, //numero da permission
                              "mentionable": false, //se ele e mencionavel
-                             "position": 49
+                             "position": 48
                          })
                          message.guild.createRole({
                             
-                        "name": "😡 SysopRage 😡",  //nome do cargo
+                        "name": "😡 Sysop Warn 😡",  //nome do cargo
                         "color": 0xff3535, //cor do cargo
                         "permissions": 1, //numero da permission
                         "mentionable": false, //se ele e mencionavel
-                        "position": 49
+                        "position": 48
                     })}
                     
         if (sysop && sysop.inv && message.content.search('discord.gg') > -1) {
         message.delete();
-         if(!message.guild.members.get(message.author.id).roles.find("name", "😡 SysopRage 😡")) {
-            message.guild.members.get(message.author.id).addRole(message.member.guild.roles.find("name", "😡 SysopRage 😡")) 
+         if(!message.guild.members.get(message.author.id).roles.find("name", "😡 Sysop Warn 😡")) {
+            message.guild.members.get(message.author.id).addRole(message.member.guild.roles.find("name", "😡 Sysop Warn 😡")) 
             message.guild.members.get(message.author.id).addRole(message.member.guild.roles.find("name", "Invite Post (1/3)")) 
            message.channel.send(`<:xguardian:476061993368027148> | <@${message.author.id}> Você não pode enviar convites de outros servidores aqui! **(1/3)**`).then(sentMsg => sentMsg.delete(60000)) 
          }}
@@ -318,7 +318,7 @@ if (oldMessage.guild) {
 database.Guilds.findOne({"_id": oldMessage.guild.id}, function(erro, sysop) {
 if (sysop) {
 
-  var oi = oldMessage.guild.roles.find("name", "😡 SysopRage 😡")        // variaveis
+  var oi = oldMessage.guild.roles.find("name", "😡 Sysop Warn 😡")        // variaveis
     if (oi == null ){
            oldMessage.guild.createRole({
                    
@@ -334,7 +334,7 @@ if (sysop) {
                       "color": 0xA4A4A4, //cor do cargo
                       "permissions": 1, //numero da permission
                       "mentionable": false, //se ele e mencionavel
-                      "position": 49
+                      "position": 48
                   })
                               oldMessage.guild.createRole({
                                  
@@ -342,21 +342,21 @@ if (sysop) {
                              "color": 0xA4A4A4, //cor do cargo
                              "permissions": 1, //numero da permission
                              "mentionable": false, //se ele e mencionavel
-                             "position": 49
+                             "position": 48
                          })
                          oldMessage.guild.createRole({
                             
-                        "name": "😡 SysopRage 😡",  //nome do cargo
+                        "name": "😡 Sysop Warn 😡",  //nome do cargo
                         "color": 0xff3535, //cor do cargo
                         "permissions": 1, //numero da permission
                         "mentionable": false, //se ele e mencionavel
-                        "position": 49
+                        "position": 48
                     })}
                     
         if (sysop && sysop.inv && oldMessage.content.search('discord.gg') > -1) {
         oldMessage.delete();
-         if(!oldMessage.guild.members.get(oldMessage.mentions.users.first().id).roles.find("name", "😡 SysopRage 😡")) {
-            oldMessage.guild.members.get(oldMessage.mentions.users.first().id).addRole(oldMessage.member.guild.roles.find("name", "😡 SysopRage 😡")) 
+         if(!oldMessage.guild.members.get(oldMessage.mentions.users.first().id).roles.find("name", "😡 Sysop Warn 😡")) {
+            oldMessage.guild.members.get(oldMessage.mentions.users.first().id).addRole(oldMessage.member.guild.roles.find("name", "😡 Sysop Warn 😡")) 
             oldMessage.guild.members.get(oldMessage.mentions.users.first().id).addRole(oldMessage.member.guild.roles.find("name", "Invite Post (1/3)")) 
            newMessage.channel.send(`<:FalseSysop3:462306755150479372> | <@${newMessage.author}> Você não pode enviar convites de outros servidores aqui! **(1/3)**`).then(sentMsg => sentMsg.delete(60000)) 
          }}
