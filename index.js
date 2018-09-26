@@ -244,25 +244,144 @@ client.on("message", message => {
 if (message.guild) {
 database.Guilds.findOne({"_id": message.guild.id}, function(erra, sysop) {
 if (sysop) {
-//if (message.member.hasPermission('ADMINISTRATOR')) return;
-if (sysop && sysop.inv && message.content.search('discord.gg') > -1) {	
-message.delete();
-return message.channel.send(`<:xguardian:476061993368027148> | ${message.author} Você não pode enviar convites de outros servidores aqui!`).then(sentMsg => sentMsg.delete(60000));
+
+var oi = message.guild.roles.find("name", "😡 SysopRage 😡")        // variaveis
+    if (oi == null ){
+           message.guild.createRole({
+                   
+               "name": "Invite Post (1/3)",  //nome do cargo
+               "color": 0xA4A4A4, //cor do cargo
+               "permissions": 1, //numero da permission
+               "mentionable": false, //se ele e mencionavel
+               "position": 49
+           })         
+                  message.guild.createRole({
+                          
+                      "name": "Invite Post (2/3)",  //nome do cargo
+                      "color": 0xA4A4A4, //cor do cargo
+                      "permissions": 1, //numero da permission
+                      "mentionable": false, //se ele e mencionavel
+                      "position": 49
+                  })
+                              message.guild.createRole({
+                                 
+                             "name": "invite post (3/3)",  //nome do cargo
+                             "color": 0xA4A4A4, //cor do cargo
+                             "permissions": 1, //numero da permission
+                             "mentionable": false, //se ele e mencionavel
+                             "position": 49
+                         })
+                         message.guild.createRole({
+                            
+                        "name": "😡 SysopRage 😡",  //nome do cargo
+                        "color": 0xff3535, //cor do cargo
+                        "permissions": 1, //numero da permission
+                        "mentionable": false, //se ele e mencionavel
+                        "position": 49
+                    })}
+                    
+        if (sysop && sysop.inv && message.content.search('discord.gg') > -1) {
+        message.delete();
+         if(!message.guild.members.get(message.author.id).roles.find("name", "😡 SysopRage 😡")) {
+            message.guild.members.get(message.author.id).addRole(message.member.guild.roles.find("name", "😡 SysopRage 😡")) 
+            message.guild.members.get(message.author.id).addRole(message.member.guild.roles.find("name", "Invite Post (1/3)")) 
+           message.channel.send(`<:xguardian:476061993368027148> | <@${message.author.id}> Você não pode enviar convites de outros servidores aqui! **(1/3)**`).then(sentMsg => sentMsg.delete(60000)) 
+         }}
+
+if (sysop && sysop.inv && message.content.search('discord.gg') > -1) {
+        message.delete();
+if(message.guild.members.get(message.author.id).roles.find("name", "Invite Post (1/3)")) {
+         message.guild.members.get(message.author.id).removeRole(message.member.guild.roles.find("name", "Invite Post (1/3)"))
+         message.guild.members.get(message.author.id).addRole(message.member.guild.roles.find("name", "Invite Post (2/3)"))
+           message.channel.send(`<:xguardian:476061993368027148> | <@${message.author.id}> Você não pode enviar convites de outros servidores aqui! **(2/3)**`).then(sentMsg => sentMsg.delete(60000)) 
+}}
+
+if (sysop && sysop.inv && message.content.search('discord.gg') > -1) {
+        message.delete();
+    if(message.guild.members.get(message.author.id).roles.find("name", "Invite Post (2/3)")) {
+        message.guild.members.get(message.author.id).removeRole(message.member.guild.roles.find("name", "Invite Post (2/3)"))
+         message.guild.members.get(message.author.id).addRole(message.member.guild.roles.find("name", "Invite Post (3/3)"))
+          message.guild.member(message.author.id).ban(0)
+          message.channel.send(`<:banSysop:476264254606016515> | <@${message.author.id}> foi banido do servidor. Motivo: **Divulgação de links de outros servidores!** **(3/3)**`).then(sentMsg => sentMsg.delete(60000)) 
+          message.author.send(`<:banSysop:476264254606016515> | <@${message.author.id}> você foi banido do servidor ${message.guild.name}. Motivo: **Divulgação de links de outros servidores!** **(x3)**`).then(sentMsg => sentMsg.delete(60000)) 
+
+    }
+
+//return message.channel.send(`<:FalseSysop3:462306755150479372> | ${message.author} Você não pode enviar convites de outros servidores aqui!`).then(sentMsg => sentMsg.delete(60000));
 }}
 });
 }
 });
 
-
 client.on("messageUpdate", (newMessage, oldMessage) => {	
 if (oldMessage.guild) {
 database.Guilds.findOne({"_id": oldMessage.guild.id}, function(erro, sysop) {
 if (sysop) {
-//if (oldMessage.member.hasPermission('ADMINISTRATOR')) return;	
+
+  var oi = oldMessage.guild.roles.find("name", "😡 SysopRage 😡")        // variaveis
+    if (oi == null ){
+           oldMessage.guild.createRole({
+                   
+               "name": "Invite Post (1/3)",  //nome do cargo
+               "color": 0xA4A4A4, //cor do cargo
+               "permissions": 1, //numero da permission
+               "mentionable": false, //se ele e mencionavel
+               "position": 49
+           })         
+                  oldMessage.guild.createRole({
+                          
+                      "name": "Invite Post (2/3)",  //nome do cargo
+                      "color": 0xA4A4A4, //cor do cargo
+                      "permissions": 1, //numero da permission
+                      "mentionable": false, //se ele e mencionavel
+                      "position": 49
+                  })
+                              oldMessage.guild.createRole({
+                                 
+                             "name": "invite post (3/3)",  //nome do cargo
+                             "color": 0xA4A4A4, //cor do cargo
+                             "permissions": 1, //numero da permission
+                             "mentionable": false, //se ele e mencionavel
+                             "position": 49
+                         })
+                         oldMessage.guild.createRole({
+                            
+                        "name": "😡 SysopRage 😡",  //nome do cargo
+                        "color": 0xff3535, //cor do cargo
+                        "permissions": 1, //numero da permission
+                        "mentionable": false, //se ele e mencionavel
+                        "position": 49
+                    })}
+                    
+        if (sysop && sysop.inv && oldMessage.content.search('discord.gg') > -1) {
+        oldMessage.delete();
+         if(!oldMessage.guild.members.get(oldMessage.mentions.users.first().id).roles.find("name", "😡 SysopRage 😡")) {
+            oldMessage.guild.members.get(oldMessage.mentions.users.first().id).addRole(oldMessage.member.guild.roles.find("name", "😡 SysopRage 😡")) 
+            oldMessage.guild.members.get(oldMessage.mentions.users.first().id).addRole(oldMessage.member.guild.roles.find("name", "Invite Post (1/3)")) 
+           newMessage.channel.send(`<:FalseSysop3:462306755150479372> | <@${newMessage.author}> Você não pode enviar convites de outros servidores aqui! **(1/3)**`).then(sentMsg => sentMsg.delete(60000)) 
+         }}
+
 if (sysop && sysop.inv && oldMessage.content.search('discord.gg') > -1) {
-oldMessage.delete();
-return newMessage.channel.send(`<:xguardian:476061993368027148> | ${newMessage.author} Você não pode enviar convites de outros servidores aqui!. **Nem mesmo editando**`).then(sentMsg => sentMsg.delete(60000)) 
+        oldMessage.delete();
+if(oldMessage.guild.members.get(oldMessage.mentions.users.first().id).roles.find("name", "Invite Post (1/3)")) {
+         oldMessage.guild.members.get(oldMessage.mentions.users.first().id).removeRole(oldMessage.member.guild.roles.find("name", "Invite Post (1/3)"))
+         oldMessage.guild.members.get(oldMessage.mentions.users.first().id).addRole(oldMessage.member.guild.roles.find("name", "Invite Post (2/3)"))
+           newMessage.channel.send(`<:FalseSysop3:462306755150479372> | <@${newMessage.author}> Você não pode enviar convites de outros servidores aqui! **(2/3)**`).then(sentMsg => sentMsg.delete(60000)) 
 }}
+
+if (sysop && sysop.inv && oldMessage.content.search('discord.gg') > -1) {
+        oldMessage.delete();
+    if(oldMessage.guild.members.get(oldMessage.mentions.users.first().id).roles.find("name", "Invite Post (2/3)")) {
+        oldMessage.guild.members.get(oldMessage.mentions.users.first().id).removeRole(oldMessage.member.guild.roles.find("name", "Invite Post (2/3)"))
+         oldMessage.guild.members.get(oldMessage.mentions.users.first().id).addRole(oldMessage.member.guild.roles.find("name", "Invite Post (3/3)"))
+          newMessage.guild.member(newMessage.author.id).ban(0)
+          newMessage.channel.send(`<:banSysop:476264254606016515> | <@${newMessage.author}> foi banido do servidor. Motivo: **Divulgação de links de outros servidores!** **(3/3)**`).then(sentMsg => sentMsg.delete(60000)) 
+          newMessage.author.send(`<:banSysop:476264254606016515> | <@${message.author.id}> você foi banido do servidor ${message.guild.name}. Motivo: **Divulgação de links de outros servidores!** **(x3)**`).then(sentMsg => sentMsg.delete(60000)) 
+
+    }}
+
+//return newMessage.channel.send(`<:FalseSysop3:462306755150479372> | ${newMessage.author} Você não pode enviar convites de outros servidores aqui!`).then(sentMsg => sentMsg.delete(60000)) 
+}
 });
 }
 });
