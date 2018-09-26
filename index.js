@@ -303,7 +303,7 @@ if (sysop && sysop.inv && message.content.search('discord.gg') > -1) {
          message.guild.members.get(message.author.id).addRole(message.member.guild.roles.find("name", "Invite Post (3/3)"))
           message.guild.member(message.author.id).ban(0)
           message.channel.send(`<:banSysop:476264254606016515> | <@${message.author.id}> foi banido do servidor. Motivo: **Divulgação de links de outros servidores!** **(3/3)**`).then(sentMsg => sentMsg.delete(60000)) 
-          message.author.send(`<:banSysop:476264254606016515> | <@${message.author.id}> você foi banido do servidor ${message.guild.name}. Motivo: **Divulgação de links de outros servidores!** **(x3)**`).then(sentMsg => sentMsg.delete(60000)) 
+          message.author.send(`<:banSysop:476264254606016515> | <@${message.author.id}> você foi banido do servidor ${message.guild.name}. Motivo: **Divulgação de links de outros servidores!** **(x3)**`)
 
     }
 
@@ -376,7 +376,7 @@ if (sysop && sysop.inv && oldMessage.content.search('discord.gg') > -1) {
          oldMessage.guild.members.get(oldMessage.mentions.users.first().id).addRole(oldMessage.member.guild.roles.find("name", "Invite Post (3/3)"))
           newMessage.guild.member(newMessage.author.id).ban(0)
           newMessage.channel.send(`<:banSysop:476264254606016515> | <@${newMessage.author}> foi banido do servidor. Motivo: **Divulgação de links de outros servidores!** **(3/3)**`).then(sentMsg => sentMsg.delete(60000)) 
-          newMessage.author.send(`<:banSysop:476264254606016515> | <@${newMessage.author.id}> você foi banido do servidor ${newMessage.guild.name}. Motivo: **Divulgação de links de outros servidores!** **(x3)**`).then(sentMsg => sentMsg.delete(60000)) 
+          newMessage.author.send(`<:banSysop:476264254606016515> | <@${newMessage.author.id}> você foi banido do servidor ${newMessage.guild.name}. Motivo: **Divulgação de links de outros servidores!** **(x3)**`) 
 
     }}
 
