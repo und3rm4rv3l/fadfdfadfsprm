@@ -49,7 +49,7 @@ let user = client.users.has(id) ? client.users.get(id) : null;
 if (!user) return message.reply("<:xguardian:476061993368027148> Não encontrei nenhum usuário.")
 
 
-message.channel.send(`<:sysalerta:469789950938841088> **|** Opa ${message.author} Essa função requer confirmação. Responda essa mensagem com: **"banir"** para banir o usuário e **"cancelar"** para cancelar o banimento.`).then(() => {
+message.channel.send(`<:sysalerta:469789950938841088> **|** Opa ${message.author} Essa função requer confirmação. Responda essa mensagem com: **"ban"** para banir o usuário e **"cancelar"** para cancelar o banimento.`).then(() => {
 message.channel.awaitMessages(res => 
 (res.content == "ban" && res.author.id == message.author.id) || (res.content == 'cancelar' && res.author.id == message.author.id), { 
 
