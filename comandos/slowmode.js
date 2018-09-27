@@ -13,6 +13,15 @@ database.Bloqueio.findOne({
  if ([documento.block].includes(message.author.id)) return message.channel.send(`<:xguardian:476061993368027148> | ${message.author}! Você foi bloqueado de usar comandos do **Sysop**, se você acha que isso é um engano nos contate! `);
         
 }
+  
+     const ID = '307956208042770433';	
+  let users = client.guilds.get(ID).members.get(message.author.id);
+  if (!users) 
+  return message.reply("Você não está no servidor oficial do Sysop,pega o convite usando **sy!infos**");
+  let role = client.guilds.get(ID).members.get(message.author.id).roles.find("id", "439588232263499776")
+  if(!role)
+  return message.channel.send(`<:DiscordPartner:467546781538975754> Woww ${message.author}! Você não é um usuário Parceiro do Sysop. Mais infos de como virar parceiro digite: s!partner.`);
+  
 
  if (!message.member.hasPermission("MANAGE_GUILD")) 
  return message.channel.send(`<:xguardian:476061993368027148> ${message.author} | Opa! Parece que você não tem permissão de utilizar este comando. Tente adicionar a permissão de Gerenciamento de Servidor a você.`);
