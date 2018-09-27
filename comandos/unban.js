@@ -18,14 +18,14 @@ database.Bloqueio.findOne({
 }
     
     
-   const ID = '307956208042770433';	
+      const ID = '307956208042770433';	
   let users = client.guilds.get(ID).members.get(message.author.id);
   if (!users) 
   return message.reply("Você não está no servidor oficial do Sysop,pega o convite usando **sy!infos**");
   let role = client.guilds.get(ID).members.get(message.author.id).roles.find("id", "439588232263499776")
   if(!role)
-  return message.channel.send(`<:DiscordPartner:467546781538975754> Woww ${message.author}! Você não é um usuário Parceiro do Sysop. Mais infos de como virar parceiro digite: sy!partner.`);
-      
+  return message.channel.send(`<:DiscordPartner:467546781538975754> Woww ${message.author}! Você não é um usuário Parceiro do Sysop. Mais infos de como virar parceiro digite: s!partner.`);
+  
 if (!message.member.hasPermission('BAN_MEMBERS')) 
 return message.reply('<:FalseSysop3:462306755150479372> Desculpe, você não tem permissão de banir usuário neste servidor!');
 
