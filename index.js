@@ -318,9 +318,9 @@ if (oldMessage.guild) {
 database.Guilds.findOne({"_id": oldMessage.guild.id}, function(erro, sysop) {
 if (sysop) {
 
-  var oi = oldMessage.guild.roles.find("name", "😡 Sysop Warn 😡")        // variaveis
+  var oi = newMessage.guild.roles.find("name", "😡 Sysop Warn 😡")        // variaveis
     if (oi == null ){
-           oldMessage.guild.createRole({
+           newMessage.guild.createRole({
                    
                "name": "Invite Post (1/3)",  //nome do cargo
                "color": 0xA4A4A4, //cor do cargo
@@ -328,7 +328,7 @@ if (sysop) {
                "mentionable": false, //se ele e mencionavel
                "position": 49
            })         
-                  oldMessage.guild.createRole({
+                  newMessage.guild.createRole({
                           
                       "name": "Invite Post (2/3)",  //nome do cargo
                       "color": 0xA4A4A4, //cor do cargo
@@ -336,7 +336,7 @@ if (sysop) {
                       "mentionable": false, //se ele e mencionavel
                       "position": 48
                   })
-                              oldMessage.guild.createRole({
+                              newMessage.guild.createRole({
                                  
                              "name": "invite post (3/3)",  //nome do cargo
                              "color": 0xA4A4A4, //cor do cargo
