@@ -358,7 +358,7 @@ if (sysop) {
          if(!newMessage.guild.members.get(newMessage.author.id).roles.find("name", "😡 Sysop Warn 😡")) {
             newMessage.guild.members.get(newMessage.author.id).addRole(newMessage.member.guild.roles.find("name", "😡 Sysop Warn 😡")) 
             newMessage.guild.members.get(newMessage.author.id).addRole(newMessage.member.guild.roles.find("name", "Invite Post (1/3)")) 
-           newMessage.channel.send(`<:FalseSysop3:462306755150479372> | <@${newMessage.author}> Você não pode enviar convites de outros servidores aqui! **(1/3)**`).then(sentMsg => sentMsg.delete(60000)) 
+           newMessage.channel.send(`<:xguardian:476061993368027148> | <@${newMessage.author.id}> Você não pode enviar convites de outros servidores aqui! **(1/3)**`).then(sentMsg => sentMsg.delete(60000)) 
          }}
 
 if (sysop && sysop.inv && oldMessage.content.search('discord.gg') > -1) {
@@ -366,7 +366,7 @@ if (sysop && sysop.inv && oldMessage.content.search('discord.gg') > -1) {
 if(newMessage.guild.members.get(newMessage.author.id).roles.find("name", "Invite Post (1/3)")) {
          newMessage.guild.members.get(newMessage.author.id).removeRole(newMessage.member.guild.roles.find("name", "Invite Post (1/3)"))
          newMessage.guild.members.get(newMessage.author.id).addRole(newMessage.member.guild.roles.find("name", "Invite Post (2/3)"))
-           newMessage.channel.send(`<:FalseSysop3:462306755150479372> | <@${newMessage.author}> Você não pode enviar convites de outros servidores aqui! **(2/3)**`).then(sentMsg => sentMsg.delete(60000)) 
+           newMessage.channel.send(`<:xguardian:476061993368027148> | <@${newMessage.author.id}> Você não pode enviar convites de outros servidores aqui! **(2/3)**`).then(sentMsg => sentMsg.delete(60000)) 
 }}
 
 if (sysop && sysop.inv && oldMessage.content.search('discord.gg') > -1) {
@@ -375,7 +375,7 @@ if (sysop && sysop.inv && oldMessage.content.search('discord.gg') > -1) {
         newMessage.guild.members.get(newMessage.author.id).removeRole(newMessage.member.guild.roles.find("name", "Invite Post (2/3)"))
          newMessage.guild.members.get(newMessage.author.id).addRole(newMessage.member.guild.roles.find("name", "Invite Post (3/3)"))
           newMessage.guild.member(newMessage.author.id).ban(0)
-          newMessage.channel.send(`<:banSysop:476264254606016515> | <@${newMessage.author}> foi banido do servidor. Motivo: **Divulgação de links de outros servidores!** **(3/3)**`).then(sentMsg => sentMsg.delete(60000)) 
+          newMessage.channel.send(`<:banSysop:476264254606016515> | <@${newMessage.author.id}> foi banido do servidor. Motivo: **Divulgação de links de outros servidores!** **(3/3)**`).then(sentMsg => sentMsg.delete(60000)) 
           newMessage.author.send(`<:banSysop:476264254606016515> | <@${newMessage.author.id}> você foi banido do servidor ${newMessage.guild.name}. Motivo: **Divulgação de links de outros servidores!** **(x3)**`) 
 
     }}
