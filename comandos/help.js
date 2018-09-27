@@ -33,7 +33,8 @@ case 'mod': {
         .setDescription(`**Prefixo:** s!\n\n
 **filtro <invites>** - Bloqueia links de convites de outros servidores nos eventos message e messageUpdate.
 **banlock <menção/ID>** - Banir usuário com motivo por menção ou por ID (Para usar por ID o usuário a ser banido, deve estar em um servidor em comum com o bot.) .
-**unban <ID>** - Desbani usuários do servidor por ID. (Para usar por ID o usuário a ser desbanido, deve estar em um servidor em comum com o bot.)`)
+**unban <ID>** - Desbani usuários do servidor por ID. (Para usar por ID o usuário a ser desbanido, deve estar em um servidor em comum com o bot.)
+**clear <amount>** - Apaga mensagens do chat ou de um usuário especifico. Sendo **100** a quantidade máxima a ser apagadas por clear.`)
         .setColor('#2780ff');
         message.author.send({embed}).then(sentMsg => sentMsg.delete(130000));
 }
