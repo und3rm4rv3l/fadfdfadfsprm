@@ -19,7 +19,7 @@ const embed = new Discord.RichEmbed()
 .setTitle(`Comandos Premium | Sysop Partners`)
 .setThumbnail(`https://cdn.discordapp.com/attachments/442346665052209153/494654244876451840/SysopLogoPremium.png`)
 .setDescription(`**s!help mod** - Para ver meus comandos de Moderação.`)
-.setFooter(message.guild.name + ' Requisado por: ' + message.author.username)
+.setFooter(message.guild.name + ' Requisitado por: ' + message.author.username)
 .setColor('#2780ff');
 if (!suffix) return message.channel.send({embed});
 
