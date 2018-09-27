@@ -23,7 +23,7 @@ const embed = new Discord.RichEmbed()
 
 **Sysop Partners** é uma versão premium para doadores do bot. Disponibilizando a doadores comandos únicos para doadores. Comandos já existentes mas com upgrades diferentes. Acesso rápido a novos comandos e muito mais.
 
-Para que você se torne um **Parceiro** do Sysop você precisa fazer uma doação de no minímo **5 (cinco reais)** para o bot via **Transferência**, onde será analisado e conferido tudo. Para ter o acesso você precisa estar em nosso servidor de Suporte oficial onde você econtrar em sites do bot ou no comando sy!info fo Sysop (NORMAL). Ao ser avaliado e analisado tudo em nosso sistema, uma tag será adicionada para você.
+Para que você se torne um **Parceiro** do Sysop você precisa fazer uma doação de no minímo **5 (cinco reais)** para o bot via **Transferência**, onde será analisado e conferido tudo. Para ter o acesso você precisa estar em nosso servidor de Suporte oficial onde você econtrar em sites do bot ou no comando sy!infos do Sysop (NORMAL). Ao ser avaliado e analisado tudo em nosso sistema, uma tag será adicionada para você.
 
 Para que você mantenha a licença **Partners** você precisa contribuir com no minímo cinco reais mensais. Usuários que doam mais de 5 reais **exemplo:** dez reais nós não contamos como próximo mês.
 
