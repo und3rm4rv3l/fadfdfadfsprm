@@ -97,14 +97,14 @@ client.on("message", (message) => {
     }, function(erro, sysop) {
 	    	    
         if (!sysop) return 
-        if (!sysop.slow) return 
+        if (!sysop.sloww) return 
         if (sysop) {
-            if (sysop.slow === 1) return 
+            if (sysop.sloww === 1) return 
             if (!slowCol.has(message.author.id)) {
                 slowCol.add(message.author.id);
                 setTimeout(() => {
                     slowCol.delete(message.author.id)
-                }, sysop.slow * 1000);
+                }, sysop.sloww * 1000);
             } else {
                 message.delete()
             }
